@@ -1,0 +1,248 @@
+2020-02-13 22:51:13.607  INFO 82966 --- [main] com.gatesma.kill.server.MainApplication  : Starting MainApplication on Mac-Marlon.local with PID 82966 (/Users/gatesma/IdeaProjects/kill/target/classes started by gatesma in /Users/gatesma/IdeaProjects/kill)
+2020-02-13 22:51:13.609  INFO 82966 --- [main] com.gatesma.kill.server.MainApplication  : No active profile set, falling back to default profiles: default
+2020-02-13 22:51:13.653  INFO 82966 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@48e92c5c: startup date [Thu Feb 13 22:51:13 CST 2020]; root of context hierarchy
+2020-02-13 22:51:14.113  INFO 82966 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [spring/spring-jdbc.xml]
+2020-02-13 22:51:14.199  WARN 82966 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gatesma.kill.model.mapper]' package. Please check your configuration.
+2020-02-13 22:51:14.322  WARN 82966 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gatesma.kill.server]' package. Please check your configuration.
+2020-02-13 22:51:14.397  INFO 82966 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-13 22:51:14.757  INFO 82966 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$cba4f4bd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:51:14.828  INFO 82966 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$539368f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:51:15.102  INFO 82966 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-13 22:51:15.123  INFO 82966 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 22:51:15.124  INFO 82966 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-02-13 22:51:15.129  INFO 82966 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/gatesma/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-02-13 22:51:15.326  INFO 82966 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-13 22:51:15.333  INFO 82966 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 22:51:15.334  INFO 82966 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1681 ms
+2020-02-13 22:51:15.439  INFO 82966 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-02-13 22:51:15.443  INFO 82966 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-13 22:51:15.443  INFO 82966 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-13 22:51:15.444  INFO 82966 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-13 22:51:15.444  INFO 82966 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-13 22:51:15.716  WARN 82966 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [spring/spring-jdbc.xml]: Invocation of init method failed; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2020-02-13 22:51:15.718  INFO 82966 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-13 22:51:15.732  INFO 82966 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-13 22:51:15.742 ERROR 82966 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [spring/spring-jdbc.xml]: Invocation of init method failed; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1708) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at com.gatesma.kill.server.MainApplication.main(MainApplication.java:25) ~[classes/:na]
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:959) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3870) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3806) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1686) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1207) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2254) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2285) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2084) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:795) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:327) ~[mysql-connector-java-5.1.37.jar:5.1.37]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.16.jar:1.0.16]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211) ~[druid-1.0.16.jar:1.0.16]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.16.jar:1.0.16]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1388) ~[druid-1.0.16.jar:1.0.16]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1442) ~[druid-1.0.16.jar:1.0.16]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:632) ~[druid-1.0.16.jar:1.0.16]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1776) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1704) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	... 16 common frames omitted
+
+2020-02-13 22:52:48.410  INFO 82978 --- [main] com.gatesma.kill.server.MainApplication  : Starting MainApplication on Mac-Marlon.local with PID 82978 (/Users/gatesma/IdeaProjects/kill/target/classes started by gatesma in /Users/gatesma/IdeaProjects/kill)
+2020-02-13 22:52:48.412  INFO 82978 --- [main] com.gatesma.kill.server.MainApplication  : No active profile set, falling back to default profiles: default
+2020-02-13 22:52:48.439  INFO 82978 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@388526fb: startup date [Thu Feb 13 22:52:48 CST 2020]; root of context hierarchy
+2020-02-13 22:52:48.801  INFO 82978 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [spring/spring-jdbc.xml]
+2020-02-13 22:52:48.878  WARN 82978 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gatesma.kill.model.mapper]' package. Please check your configuration.
+2020-02-13 22:52:48.962  WARN 82978 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gatesma.kill.server]' package. Please check your configuration.
+2020-02-13 22:52:49.025  INFO 82978 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-13 22:52:49.339  INFO 82978 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$e3847664] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:52:49.387  INFO 82978 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1d18b836] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:52:49.614  INFO 82978 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-13 22:52:49.637  INFO 82978 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 22:52:49.637  INFO 82978 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-02-13 22:52:49.641  INFO 82978 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/gatesma/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-02-13 22:52:49.815  INFO 82978 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-13 22:52:49.824  INFO 82978 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 22:52:49.824  INFO 82978 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1385 ms
+2020-02-13 22:52:49.926  INFO 82978 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-02-13 22:52:49.930  INFO 82978 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-13 22:52:49.930  INFO 82978 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-13 22:52:49.930  INFO 82978 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-13 22:52:49.930  INFO 82978 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-13 22:52:50.300  INFO 82978 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 22:52:50.515  INFO 82978 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@388526fb: startup date [Thu Feb 13 22:52:48 CST 2020]; root of context hierarchy
+2020-02-13 22:52:50.563  INFO 82978 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-02-13 22:52:50.564  INFO 82978 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-13 22:52:50.582  INFO 82978 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 22:52:50.583  INFO 82978 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 22:52:50.621  WARN 82978 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-02-13 22:52:51.279  INFO 82978 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-13 22:52:51.281  INFO 82978 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-02-13 22:52:51.288  INFO 82978 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2020-02-13 22:52:51.291  INFO 82978 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2020-02-13 22:52:51.292  INFO 82978 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2020-02-13 22:52:51.309  INFO 82978 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2020-02-13 22:52:51.347  INFO 82978 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-13 22:52:51.352  INFO 82978 --- [main] com.gatesma.kill.server.MainApplication  : Started MainApplication in 3.164 seconds (JVM running for 3.706)
+2020-02-13 22:58:20.836  INFO 83238 --- [main] com.gatesma.kill.server.MainApplication  : Starting MainApplication on Mac-Marlon.local with PID 83238 (/Users/gatesma/IdeaProjects/kill/target/classes started by gatesma in /Users/gatesma/IdeaProjects/kill)
+2020-02-13 22:58:20.838  INFO 83238 --- [main] com.gatesma.kill.server.MainApplication  : No active profile set, falling back to default profiles: default
+2020-02-13 22:58:20.871  INFO 83238 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71529963: startup date [Thu Feb 13 22:58:20 CST 2020]; root of context hierarchy
+2020-02-13 22:58:21.288  INFO 83238 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [spring/spring-jdbc.xml]
+2020-02-13 22:58:21.364  WARN 83238 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gatesma.kill.model.mapper]' package. Please check your configuration.
+2020-02-13 22:58:21.454  WARN 83238 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gatesma.kill.server]' package. Please check your configuration.
+2020-02-13 22:58:21.512  INFO 83238 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-13 22:58:21.833  INFO 83238 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$fa364876] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:58:21.878  INFO 83238 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$33ca8a48] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:58:22.113  INFO 83238 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-13 22:58:22.133  INFO 83238 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 22:58:22.133  INFO 83238 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-02-13 22:58:22.138  INFO 83238 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/gatesma/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-02-13 22:58:22.347  INFO 83238 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-13 22:58:22.354  INFO 83238 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 22:58:22.355  INFO 83238 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1484 ms
+2020-02-13 22:58:22.453  INFO 83238 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-02-13 22:58:22.458  INFO 83238 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-13 22:58:22.458  INFO 83238 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-13 22:58:22.458  INFO 83238 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-13 22:58:22.458  INFO 83238 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-13 22:58:22.942  INFO 83238 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 22:58:23.210  INFO 83238 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71529963: startup date [Thu Feb 13 22:58:20 CST 2020]; root of context hierarchy
+2020-02-13 22:58:23.258  INFO 83238 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-02-13 22:58:23.259  INFO 83238 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-13 22:58:23.281  INFO 83238 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 22:58:23.281  INFO 83238 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 22:58:23.323  WARN 83238 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-02-13 22:58:24.065  INFO 83238 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-13 22:58:24.066  INFO 83238 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-02-13 22:58:24.073  INFO 83238 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2020-02-13 22:58:24.075  INFO 83238 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2020-02-13 22:58:24.076  INFO 83238 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2020-02-13 22:58:24.096  INFO 83238 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2020-02-13 22:58:24.134  INFO 83238 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-13 22:58:24.139  INFO 83238 --- [main] com.gatesma.kill.server.MainApplication  : Started MainApplication in 3.57 seconds (JVM running for 4.352)
+2020-02-13 22:59:00.963  INFO 83238 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-02-13 22:59:00.964  INFO 83238 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-02-13 22:59:00.981  INFO 83238 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2020-02-13 22:59:34.412  INFO 83238 --- [Thread-2] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71529963: startup date [Thu Feb 13 22:58:20 CST 2020]; root of context hierarchy
+2020-02-13 22:59:34.415  INFO 83238 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2020-02-13 22:59:34.417  INFO 83238 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2020-02-13 22:59:34.428  INFO 83238 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-13 22:59:34.429  INFO 83238 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-02-13 22:59:37.107  INFO 83267 --- [main] com.gatesma.kill.server.MainApplication  : Starting MainApplication on Mac-Marlon.local with PID 83267 (/Users/gatesma/IdeaProjects/kill/target/classes started by gatesma in /Users/gatesma/IdeaProjects/kill)
+2020-02-13 22:59:37.108  INFO 83267 --- [main] com.gatesma.kill.server.MainApplication  : No active profile set, falling back to default profiles: default
+2020-02-13 22:59:37.140  INFO 83267 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71c27ee8: startup date [Thu Feb 13 22:59:37 CST 2020]; root of context hierarchy
+2020-02-13 22:59:37.536  INFO 83267 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [spring/spring-jdbc.xml]
+2020-02-13 22:59:37.612  WARN 83267 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gatesma.kill.model.mapper]' package. Please check your configuration.
+2020-02-13 22:59:37.696  WARN 83267 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gatesma.kill.server]' package. Please check your configuration.
+2020-02-13 22:59:37.754  INFO 83267 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-13 22:59:38.055  INFO 83267 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$6f7d9f55] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:59:38.099  INFO 83267 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a911e127] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:59:38.328  INFO 83267 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-13 22:59:38.350  INFO 83267 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 22:59:38.350  INFO 83267 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-02-13 22:59:38.354  INFO 83267 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/gatesma/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-02-13 22:59:38.528  INFO 83267 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-13 22:59:38.536  INFO 83267 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 22:59:38.537  INFO 83267 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1397 ms
+2020-02-13 22:59:38.636  INFO 83267 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-02-13 22:59:38.640  INFO 83267 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-13 22:59:38.640  INFO 83267 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-13 22:59:38.640  INFO 83267 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-13 22:59:38.640  INFO 83267 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-13 22:59:39.012  INFO 83267 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 22:59:39.219  INFO 83267 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71c27ee8: startup date [Thu Feb 13 22:59:37 CST 2020]; root of context hierarchy
+2020-02-13 22:59:39.262  INFO 83267 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-02-13 22:59:39.262  INFO 83267 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-13 22:59:39.282  INFO 83267 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 22:59:39.282  INFO 83267 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 22:59:39.368  INFO 83267 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 22:59:39.943  INFO 83267 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-13 22:59:39.944  INFO 83267 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-02-13 22:59:39.949  INFO 83267 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2020-02-13 22:59:39.952  INFO 83267 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2020-02-13 22:59:39.953  INFO 83267 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2020-02-13 22:59:39.970  INFO 83267 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2020-02-13 22:59:40.004  INFO 83267 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-13 22:59:40.008  INFO 83267 --- [main] com.gatesma.kill.server.MainApplication  : Started MainApplication in 3.151 seconds (JVM running for 3.722)
+2020-02-13 22:59:45.448  INFO 83267 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-02-13 22:59:45.449  INFO 83267 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-02-13 22:59:45.466  INFO 83267 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2020-02-13 23:02:01.216  INFO 83267 --- [Thread-2] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71c27ee8: startup date [Thu Feb 13 22:59:37 CST 2020]; root of context hierarchy
+2020-02-13 23:02:01.219  INFO 83267 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2020-02-13 23:02:01.219  INFO 83267 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2020-02-13 23:02:01.226  INFO 83267 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-13 23:02:01.228  INFO 83267 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-02-13 23:02:04.050  INFO 83291 --- [main] com.gatesma.kill.server.MainApplication  : Starting MainApplication on Mac-Marlon.local with PID 83291 (/Users/gatesma/IdeaProjects/kill/target/classes started by gatesma in /Users/gatesma/IdeaProjects/kill)
+2020-02-13 23:02:04.052  INFO 83291 --- [main] com.gatesma.kill.server.MainApplication  : No active profile set, falling back to default profiles: default
+2020-02-13 23:02:04.086  INFO 83291 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78383390: startup date [Thu Feb 13 23:02:04 CST 2020]; root of context hierarchy
+2020-02-13 23:02:04.516  INFO 83291 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [spring/spring-jdbc.xml]
+2020-02-13 23:02:04.595  WARN 83291 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gatesma.kill.model.mapper]' package. Please check your configuration.
+2020-02-13 23:02:04.679  WARN 83291 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gatesma.kill.server]' package. Please check your configuration.
+2020-02-13 23:02:04.743  INFO 83291 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-13 23:02:05.073  INFO 83291 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$9cc78527] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:02:05.120  INFO 83291 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d65bc6f9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:02:05.362  INFO 83291 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-13 23:02:05.383  INFO 83291 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 23:02:05.383  INFO 83291 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-02-13 23:02:05.387  INFO 83291 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/gatesma/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-02-13 23:02:05.563  INFO 83291 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-13 23:02:05.571  INFO 83291 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 23:02:05.572  INFO 83291 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1486 ms
+2020-02-13 23:02:05.672  INFO 83291 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-02-13 23:02:05.676  INFO 83291 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-13 23:02:05.676  INFO 83291 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-13 23:02:05.676  INFO 83291 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-13 23:02:05.677  INFO 83291 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-13 23:02:06.061  INFO 83291 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 23:02:06.276  INFO 83291 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78383390: startup date [Thu Feb 13 23:02:04 CST 2020]; root of context hierarchy
+2020-02-13 23:02:06.321  INFO 83291 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-02-13 23:02:06.322  INFO 83291 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-13 23:02:06.341  INFO 83291 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 23:02:06.341  INFO 83291 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-13 23:02:06.424  INFO 83291 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 23:02:07.043  INFO 83291 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-13 23:02:07.044  INFO 83291 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-02-13 23:02:07.050  INFO 83291 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2020-02-13 23:02:07.054  INFO 83291 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2020-02-13 23:02:07.055  INFO 83291 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2020-02-13 23:02:07.072  INFO 83291 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2020-02-13 23:02:07.112  INFO 83291 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-13 23:02:07.116  INFO 83291 --- [main] com.gatesma.kill.server.MainApplication  : Started MainApplication in 3.323 seconds (JVM running for 4.096)
+2020-02-13 23:02:14.762  INFO 83291 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-02-13 23:02:14.763  INFO 83291 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-02-13 23:02:14.779  INFO 83291 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2020-02-13 23:22:33.853  INFO 83291 --- [Thread-2] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78383390: startup date [Thu Feb 13 23:02:04 CST 2020]; root of context hierarchy
+2020-02-13 23:22:33.858  INFO 83291 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2020-02-13 23:22:33.858  INFO 83291 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2020-02-13 23:22:33.865  INFO 83291 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-13 23:22:33.866  INFO 83291 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
