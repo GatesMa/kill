@@ -2,16 +2,24 @@ package com.gatesma.kill.server.service.impl;
 
 import com.gatesma.kill.model.entities.ItemKill;
 import com.gatesma.kill.model.entities.ItemKillSuccess;
+import com.gatesma.kill.model.mapper.ItemKillMapper;
+import com.gatesma.kill.model.mapper.ItemKillSuccessMapper;
+import com.gatesma.kill.server.enums.SysConstant;
 import com.gatesma.kill.server.service.KillService;
+import com.gatesma.kill.server.service.RabbitSenderService;
 import com.gatesma.kill.server.utils.RandomUtil;
+import com.gatesma.kill.server.utils.SnowFlake;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.locks.InterProcessMutex;
 import org.joda.time.DateTime;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,7 +31,8 @@ import java.util.concurrent.TimeUnit;
  * Date:     2020/2/14 14:44
  * Description:
  */
-public class KillServiceImpl extends KillService {
+@Service
+public class KillServiceImpl implements KillService {
 
 
     private static final Logger log= LoggerFactory.getLogger(KillService.class);

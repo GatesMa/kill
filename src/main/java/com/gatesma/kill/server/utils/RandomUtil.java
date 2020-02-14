@@ -1,5 +1,6 @@
 package com.gatesma.kill.server.utils;
 
+import org.apache.shiro.crypto.hash.Md5Hash;
 import org.joda.time.DateTime;
 
 import java.text.SimpleDateFormat;
